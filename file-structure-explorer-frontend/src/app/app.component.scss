@@ -39,11 +39,11 @@ html, body {
 .explorer {
   overflow: scroll;
   min-width: 10%;
-  background-color: antiquewhite;
+  background-color: #f2f2f2;
   resize: horizontal;
 }
 .mat-tree {
-  background-color: antiquewhite;
+  background-color: #f2f2f2;
 }
 
 .mat-tree-node {
@@ -112,11 +112,11 @@ html, body {
 }
 
 .btn {
-  background-color: white;
-  color: black;
-  font-size: 2em;
+  background-color: #5c6bc0;
+  padding: 0.3em 1em;
+  color: white;
   border: 1px solid;
-  border-radius: 0.5em;
+  font-size: 1em;
   &:hover {
     background-color: #1E90FF;
   }
