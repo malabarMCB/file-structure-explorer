@@ -1,0 +1,143 @@
+@import '~@angular/material/theming';
+
+:root {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.outer {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  text-align: center;
+  border: 6px double #5c6bc0;
+  & > h3 {
+    font-style: italic;
+  }
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+}
+
+.explorer {
+  overflow: scroll;
+  min-width: 10%;
+  background-color: antiquewhite;
+  resize: horizontal;
+}
+.mat-tree {
+  background-color: antiquewhite;
+}
+
+.mat-tree-node {
+  min-height: 2.5em;
+  word-wrap: unset;
+}
+
+.leaf {
+
+}
+
+.leaf-ico {
+  float: left;
+}
+
+.leaf-name {
+  overflow: hidden;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-left: 0.3em;
+  white-space: nowrap;
+}
+
+.toggle-btn {
+  background-color: inherit;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+.grid {
+  min-width: 30%;
+  flex: 2;
+}
+
+.grid-item {
+  border: 1px solid  #e6e6e6;
+  padding-left: 1em;
+  &:nth-child(even) {
+    background-color: #e6e6e6;
+  }
+  &:hover {
+    background-color: #dadef1;
+    cursor: pointer;
+  }
+}
+
+.grid-item-ico {
+  float: left;
+  margin-right: 0.8em;
+}
+
+.grid-item-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn-container {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  * + * {
+    margin-left: 0.3em;
+  }
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  font-size: 2em;
+  border: 1px solid;
+  border-radius: 0.5em;
+  &:hover {
+    background-color: #1E90FF;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
