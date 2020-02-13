@@ -80,13 +80,13 @@ html, body {
   flex-direction: column;
 }
 
-.grid-container-wrapper {
+.scrollable-container-wrapper {
   position: relative;
   flex: 2;
   height: 100%;
 }
 
-.grid-container {
+.scrollable-container {
   display: flex;
   flex-direction: column;
   position: absolute;
