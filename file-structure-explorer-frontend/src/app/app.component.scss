@@ -50,24 +50,25 @@ html, body {
 
 .mat-tree {
   background-color: #f2f2f2;
-  overflow: auto;
+  display: inline-block;
 }
 
 .mat-tree-node {
   min-height: 2.5em;
   word-wrap: unset;
+  overflow: visible;
+  padding-right: 1em;
 }
 
 .leaf {
-
+  display: flex;
 }
 
 .leaf-ico {
-  float: left;
+
 }
 
 .leaf-name {
-  overflow: hidden;
   margin-block-end: 0;
   margin-block-start: 0;
   padding-left: 0.3em;
