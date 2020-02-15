@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {MatTreeFlatDataSource, MatTreeFlattener} from '@angular/material';
 import {FlatTreeControl} from '@angular/cdk/tree';
 
@@ -52,6 +52,8 @@ interface ExampleFlatNode {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild('resizableElement', {static: false}) resizableElement: ElementRef;
+
   private _transformer = (node: FoodNode, level: number) => {
     return {
       expandable: !!node.children && node.children.length > 0,
@@ -73,4 +75,27 @@ export class AppComponent {
   }
 
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
+
+  onMouseDown(e: MouseEvent) {
+    console.log(this.resizableElement);
+    const elem = this.resizableElement.nativeElement;
+
+    function onMouseMove(event: MouseEvent) {
+      console.log(event);
+      if (event.clientX > 0) {
+        elem.setAttribute('style', `width: ${event.clientX}px`);
+      }
+    }
+
+    function onMouseUp(event) {
+      console.log('mouse up');
+      console.log(event);
+
+      document.documentElement.removeEventListener('mousemove', onMouseMove, false);
+      document.documentElement.removeEventListener('mouseup', onMouseUp, false);
+    }
+
+    document.documentElement.addEventListener('mousemove', onMouseMove, false);
+    document.documentElement.addEventListener('mouseup', onMouseUp, false);
+  }
 }

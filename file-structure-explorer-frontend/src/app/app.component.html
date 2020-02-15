@@ -4,7 +4,7 @@
   </div>
   <div class="container">
 
-    <div class="explorer-container">
+    <div class="explorer-container" #resizableElement>
       <div class="scrollable-container-wrapper">
         <div class="scrollable-container">
           <div class="explorer">
@@ -35,6 +35,12 @@
             </mat-tree>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="resizer-container">
+      <div class="resizer" (mousedown)="onMouseDown($event)">
+        <span class="resizer-ico"></span>
       </div>
     </div>
 

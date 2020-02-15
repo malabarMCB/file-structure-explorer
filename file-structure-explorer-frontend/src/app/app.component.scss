@@ -44,6 +44,29 @@ html, body {
   width: 30%;
 }
 
+.resizer-container {
+  position: relative;
+  height: 100%;
+}
+
+.resizer {
+  position: absolute;
+  right: 0;
+  cursor: col-resize;
+  width: 10px;
+  height: 100%;
+  border-left: 2px solid white;
+}
+
+.resizer-ico {
+  position: absolute;
+  top: 50%;
+  font-size: 1.8em;
+  &:before {
+    content: "\0022EE";
+  }
+}
+
 .explorer {
   overflow-y: auto;
 }
