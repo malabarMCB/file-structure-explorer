@@ -77,20 +77,15 @@ export class AppComponent {
   hasChild = (_: number, node: ExampleFlatNode) => node.expandable;
 
   onMouseDown(e: MouseEvent) {
-    console.log(this.resizableElement);
     const elem = this.resizableElement.nativeElement;
 
     function onMouseMove(event: MouseEvent) {
-      console.log(event);
       if (event.clientX > 0) {
         elem.setAttribute('style', `width: ${event.clientX}px`);
       }
     }
 
     function onMouseUp(event) {
-      console.log('mouse up');
-      console.log(event);
-
       document.documentElement.removeEventListener('mousemove', onMouseMove, false);
       document.documentElement.removeEventListener('mouseup', onMouseUp, false);
     }

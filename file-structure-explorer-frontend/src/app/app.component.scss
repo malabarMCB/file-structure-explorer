@@ -189,6 +189,7 @@ html, body {
 }
 
 .btn-container {
+  overflow: hidden;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   padding-left: 0.5em;
@@ -199,6 +200,8 @@ html, body {
 
 .btn {
   background-color: #5c6bc0;
+  overflow: hidden;
+  white-space: nowrap;
   padding: 0.3em 1em;
   color: white;
   border: 1px solid;
