@@ -1,0 +1,37 @@
+.btn-container {
+  overflow: hidden;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  * + * {
+    margin-left: 0.3em;
+  }
+  display: flex;
+}
+
+.btn {
+  background-color: #5c6bc0;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.3em 1em;
+  color: white;
+  border: 1px solid;
+  font-size: 1em;
+  &:hover {
+    background-color: #1E90FF;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.path {
+  margin: 0.5em 0 1em 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  & > span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

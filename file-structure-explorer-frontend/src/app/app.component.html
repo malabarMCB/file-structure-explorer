@@ -1,149 +1,22 @@
 <div class="outer">
-  <div class="header">
-    <h3>File structure explorer</h3>
-  </div>
+  <app-header></app-header>
+
   <div class="container">
 
-    <div class="explorer-container" #resizableElement>
-      <div class="scrollable-container-wrapper">
-        <div class="scrollable-container">
-          <div class="explorer">
-            <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
-              <!-- This is the tree node template for leaf nodes -->
-              <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
-                <!-- use a disabled button to provide padding for tree leaf -->
-                <!--<button mat-icon-button disabled></button>-->
-
-                <div class="leaf">
-                  <img src="assets\ico\js.png" class="leaf-ico" width="20">
-                  <p class="leaf-name">{{node.name}}</p>
-                </div>
-              </mat-tree-node>
-              <!-- This is the tree node template for expandable nodes -->
-              <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
-                <button class="toggle-btn" mat-icon-button matTreeNodeToggle
-                        [attr.aria-label]="'toggle ' + node.name">
-                  <mat-icon class="mat-icon-rtl-mirror">
-                    {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-                  </mat-icon>
-                </button>
-                <div class="leaf">
-                  <img src="assets\ico\folder.png" class="leaf-ico" width="20">
-                  <p class="leaf-name">{{node.name}}</p>
-                </div>
-              </mat-tree-node>
-            </mat-tree>
-          </div>
-        </div>
-      </div>
+    <div class="left" #left>
+      <app-scrollable-container>
+        <app-file-tree></app-file-tree>
+      </app-scrollable-container>
     </div>
 
-    <div class="resizer-container">
-      <div class="resizer" (mousedown)="onMouseDown($event)">
-        <span class="resizer-ico"></span>
-      </div>
-    </div>
+    <app-resizer [resizableElement]="left"></app-resizer>
 
     <div class="main">
-      <div>
-        <div class="btn-container">
-          <button class="btn">Up </button>
-          <button class="btn">Upload</button>
-          <button class="btn">New folder</button>
-          <button class="btn">Paste</button>
-        </div>
+      <app-control-panel></app-control-panel>
 
-        <h3 class="path">
-          <span>C:</span>\<span>Program files</span>\<span>win32</span>
-        </h3>
-      </div>
-
-      <div class="scrollable-container-wrapper">
-        <div class="scrollable-container">
-          <div class="grid">
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-<!--                        <div class="grid-item-actions-container">-->
-<!--                          <ul class="grid-items-action-menu">-->
-<!--                            <li>-->
-<!--                              <div class="grid-item-action">-->
-<!--                                <img src="assets\items-actions\copy.png" width="20">-->
-<!--                                <p>Copy</p>-->
-<!--                              </div>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                              <div class="grid-item-action">-->
-<!--                                <img src="assets\items-actions\cut.png" width="20">-->
-<!--                                <p>Cut</p>-->
-<!--                              </div>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                              <div class="grid-item-action">-->
-<!--                                <img src="assets\items-actions\rename.png" width="20">-->
-<!--                                <p>Rename</p>-->
-<!--                              </div>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                              <div class="grid-item-action">-->
-<!--                                <img src="assets\items-actions\delete.png" width="20">-->
-<!--                                <p>Delete</p>-->
-<!--                              </div>-->
-<!--                            </li>-->
-<!--                          </ul>-->
-<!--                        </div>-->
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">Folder</p>
-            </div>
-            <div class="grid-item">
-              <img src="assets\ico\folder.png" class="grid-item-ico" width="40">
-              <p class="grid-item-text">End</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <app-scrollable-container>
+        <app-file-grid></app-file-grid>
+      </app-scrollable-container>
 
     </div>
   </div>

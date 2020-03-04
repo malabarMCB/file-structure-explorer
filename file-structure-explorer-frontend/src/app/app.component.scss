@@ -1,34 +1,7 @@
-@import '~@angular/material/theming';
-
-:root {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*,
-::before,
-::after {
-  box-sizing: inherit;
-}
-
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
 .outer {
   height: 100%;
   display: flex;
   flex-flow: column;
-}
-
-.header {
-  text-align: center;
-  border: 6px double #5c6bc0;
-  & > h3 {
-    font-style: italic;
-  }
 }
 
 .container {
@@ -36,74 +9,12 @@ html, body {
   flex-grow: 1;
 }
 
-.explorer-container {
+.left {
   min-width: 10%;
-  background-color: #f2f2f2;
+  background-color: var(--light-gray);
   display: flex;
   flex-direction: column;
   width: 30%;
-}
-
-.resizer-container {
-  position: relative;
-  height: 100%;
-}
-
-.resizer {
-  position: absolute;
-  right: 0;
-  cursor: col-resize;
-  width: 10px;
-  height: 100%;
-  border-left: 2px solid white;
-}
-
-.resizer-ico {
-  position: absolute;
-  top: 50%;
-  font-size: 1.8em;
-  &:before {
-    content: "\0022EE";
-  }
-}
-
-.explorer {
-  overflow-y: auto;
-}
-
-.mat-tree {
-  background-color: #f2f2f2;
-  display: inline-block;
-}
-
-.mat-tree-node {
-  min-height: 2.5em;
-  word-wrap: unset;
-  overflow: visible;
-  padding-right: 1em;
-}
-
-.leaf {
-  display: flex;
-}
-
-.leaf-ico {
-
-}
-
-.leaf-name {
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-left: 0.3em;
-  white-space: nowrap;
-}
-
-.toggle-btn {
-  background-color: inherit;
-  border: none;
-  &:focus {
-    outline: none;
-  }
 }
 
 .main {
@@ -111,118 +22,6 @@ html, body {
   flex: 2;
   display: flex;
   flex-direction: column;
-}
-
-.scrollable-container-wrapper {
-  position: relative;
-  flex: 2;
-  height: 100%;
-}
-
-.scrollable-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.grid {
-  overflow-y: auto;
-  align-items: center;
-}
-
-.grid-item {
-  padding-left: 1em;
-  display: flex;
-  &:nth-child(odd) {
-    background-color: #e6e6e6;
-  }
-  &:hover {
-    background-color: #dadef1;
-    cursor: default;
-  }
-}
-
-.grid-item-ico {
-  float: left;
-  margin-right: 0.8em;
-  object-fit: contain;
-}
-
-.grid-item-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.grid-items-actions-container {
-  position: relative;
-  display: inline-block;
-}
-
-.grid-items-action-menu {
-  border: 1px solid #e6e6e6;
-  background-color: white;
-  list-style-type: none;
-  position: absolute;
-  padding-left: 0;
-}
-
-.grid-item-action {
-  display: flex;
-  padding-left: 0.5em;
-  & > img {
-    float: left;
-    margin-right: 0.5em;
-    object-fit: contain;
-  }
-  & > p {
-    margin: 0.5em;
-  }
-  &:hover {
-    cursor: pointer;
-    background-color: #e6e6e6;
-  }
-}
-
-.btn-container {
-  overflow: hidden;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  padding-left: 0.5em;
-  * + * {
-    margin-left: 0.3em;
-  }
-}
-
-.btn {
-  background-color: #5c6bc0;
-  overflow: hidden;
-  white-space: nowrap;
-  padding: 0.3em 1em;
-  color: white;
-  border: 1px solid;
-  font-size: 1em;
-  &:hover {
-    background-color: #1E90FF;
-  }
-  &:focus {
-    outline: none;
-  }
-}
-
-.path {
-  margin: 0.5em 0 1em 1em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  & > span:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
 }
 
 
