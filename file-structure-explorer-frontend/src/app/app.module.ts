@@ -12,6 +12,7 @@ import { ControlPanelComponent } from './components/control-panel/control-panel.
 import { FileGridComponent } from './components/file-grid/file-grid.component';
 import { FileGridItemComponent } from './components/file-grid-item/file-grid-item.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ResizerComponent } from './components/resizer/resizer.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTreeModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,5 +13,4 @@ export class FileGridItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

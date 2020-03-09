@@ -8,9 +8,12 @@
     background-color: var(--light-blue);
     cursor: default;
   }
+  &>.options-container {
+    margin-left: auto;
+  }
 }
 
-.ico {
+img {
   float: left;
   margin-right: 0.8em;
   object-fit: contain;
@@ -22,32 +25,6 @@
   white-space: nowrap;
 }
 
-.grid-items-actions-container {
-  position: relative;
-  display: inline-block;
-}
-
-.grid-items-action-menu {
-  border: 1px solid var(--deep-gray);
-  background-color: white;
-  list-style-type: none;
-  position: absolute;
-  padding-left: 0;
-}
-
-.grid-item-action {
-  display: flex;
-  padding-left: 0.5em;
-  & > img {
-    float: left;
-    margin-right: 0.5em;
-    object-fit: contain;
-  }
-  & > p {
-    margin: 0.5em;
-  }
-  &:hover {
-    cursor: pointer;
-    background-color: var(--deep-gray);
-  }
+.options-container {
+  padding-top: 1em;
 }
