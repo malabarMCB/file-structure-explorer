@@ -1,6 +1,6 @@
 header {
   text-align: center;
-  border: 6px double #5c6bc0;
+  border: 6px double var(--purple);
   & > h3 {
     font-style: italic;
   }
