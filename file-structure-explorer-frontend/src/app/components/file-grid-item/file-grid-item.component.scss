@@ -25,6 +25,17 @@ img {
   white-space: nowrap;
 }
 
+.rename {
+  font-size: inherit;
+  font-style: inherit;
+}
+
 .options-container {
   padding-top: 1em;
+
+  &>img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

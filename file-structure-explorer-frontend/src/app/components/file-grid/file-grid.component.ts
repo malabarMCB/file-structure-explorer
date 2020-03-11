@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {File} from '../../models/file';
 
 @Component({
   selector: 'app-file-grid',
   templateUrl: './file-grid.component.html',
   styleUrls: ['./file-grid.component.scss']
 })
-export class FileGridComponent implements OnInit {
+export class FileGridComponent {
 
-  constructor() { }
+  files: File[];
+  renamedFileId: string;
 
-  ngOnInit() {
+  constructor() {
+    this.files = new Array(20);
+    for (let i = 0; i < this.files.length; i++) {
+      this.files[i] = {
+        icoPath: 'assets\\ico\\folder.png',
+        id: i.toString(),
+        isFolder: true,
+        name: 'Folder'
+      };
+    }
   }
 
+  onFileRenameRequired(fileId: string) {
+    this.renamedFileId = fileId;
+  }
+
+  onFileRenameCompleted(file: File) {
+    this.renamedFileId = null;
+  }
 }

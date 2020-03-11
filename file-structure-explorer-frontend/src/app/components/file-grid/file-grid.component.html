@@ -1,19 +1,6 @@
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="Folder" imagePath="assets\ico\folder.png"></app-file-grid-item>
-<app-file-grid-item fileName="End" imagePath="assets\ico\folder.png"></app-file-grid-item>
+<app-file-grid-item [file]="file" *ngFor="let file of files"
+                    [isRenameMode]="file.id === renamedFileId"
+                    (renameRequired)="onFileRenameRequired($event)"
+                    (renameCompleted)="onFileRenameCompleted($event)"
+                    (renameCancelled)="onFileRenameRequired('')"
+></app-file-grid-item>

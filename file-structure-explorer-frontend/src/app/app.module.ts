@@ -13,6 +13,7 @@ import { FileGridComponent } from './components/file-grid/file-grid.component';
 import { FileGridItemComponent } from './components/file-grid-item/file-grid-item.component';
 import { ResizerComponent } from './components/resizer/resizer.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BrowserAnimationsModule,
     MatTreeModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
