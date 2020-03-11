@@ -13,6 +13,9 @@ export class FileGridItemComponent implements AfterViewChecked {
   @Output() renameRequired = new EventEmitter<string>();
   @Output() renameCompleted = new EventEmitter<File>();
   @Output() renameCancelled = new EventEmitter();
+  @Output() copied = new EventEmitter<File>();
+  @Output() deleted = new EventEmitter<File>();
+  @Output() cutRequired = new EventEmitter<File>();
 
   @ViewChild('renameInput', {static: false}) renameInput: ElementRef;
 

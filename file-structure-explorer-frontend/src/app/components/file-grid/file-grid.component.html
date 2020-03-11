@@ -3,4 +3,7 @@
                     (renameRequired)="onFileRenameRequired($event)"
                     (renameCompleted)="onFileRenameCompleted($event)"
                     (renameCancelled)="onFileRenameRequired('')"
+                    (copied)="onFileCopied($event)"
+                    (cutRequired)="onFileCut($event)"
+                    (deleted)="onFileDeleted($event)"
 ></app-file-grid-item>

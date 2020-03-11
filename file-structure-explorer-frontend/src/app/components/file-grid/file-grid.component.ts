@@ -30,4 +30,16 @@ export class FileGridComponent {
   onFileRenameCompleted(file: File) {
     this.renamedFileId = null;
   }
+
+  onFileCopied(file: File) {
+    console.log('copied', file);
+  }
+
+  onFileDeleted(file: File) {
+    console.log('deleted', file);
+  }
+
+  onFileCut(file: File) {
+    console.log('cut', file);
+  }
 }

@@ -4,8 +4,8 @@
 <input class="rename" [(ngModel)]="updatedName" *ngIf="isRenameMode" #renameInput/>
 
 <div class="options-container" *ngIf="!isRenameMode">
-  <img src="assets\items-actions\copy.png" width="20" matTooltip="Copy">
-  <img src="assets\items-actions\cut.png" width="20" matTooltip="Cut">
+  <img src="assets\items-actions\copy.png" width="20" matTooltip="Copy" (click)="copied.emit(file)">
+  <img src="assets\items-actions\cut.png" width="20" matTooltip="Cut" (click)="cutRequired.emit(file)">
   <img src="assets\items-actions\rename.png" width="20" matTooltip="Rename" (click)="rename()">
-  <img src="assets\items-actions\delete.png" width="20" matTooltip="Delete">
+  <img src="assets\items-actions\delete.png" width="20" matTooltip="Delete" (click)="deleted.emit(file)">
 </div>
